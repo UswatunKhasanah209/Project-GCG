@@ -18,5 +18,7 @@
     }
   ],
 
-  "buildCommand": "npm install && npm run build"
+  "buildCommand": "npm install && npm run build",
+
+  "outputDirectory": "public/build"
 }
