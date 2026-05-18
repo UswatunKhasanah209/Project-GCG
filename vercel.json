@@ -1,11 +1,12 @@
 {
   "version": 2,
 
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@latest"
+  "builds": [
+    {
+      "src": "api/index.php",
+      "use": "@vercel/php"
     }
-  },
+  ],
 
   "routes": [
     {
@@ -16,9 +17,5 @@
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
-  ],
-
-  "buildCommand": "npm install && npm run build",
-
-  "outputDirectory": "public/build"
+  ]
 }
